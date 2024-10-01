@@ -218,13 +218,7 @@ function updateResults() {
 
 function setSearch(query) {
     let search = document.getElementById('search-products');
-    
-    if (search.value == query) {
-        search.value = null
-    } else {
-        search.value = query;
-    }
-	
+    search.value = search.value == query ? null : query
     updateResults();
 }
 
